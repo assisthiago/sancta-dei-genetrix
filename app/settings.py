@@ -18,7 +18,6 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="", cast=Csv())
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -114,3 +113,6 @@ STATIC_ROOT = str(BASE_DIR / "staticfiles")
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 INTERNAL_IPS = ["127.0.0.1"]
+
+# App envs
+MATER_DEI_TITLES = config("MATER_DEI_TITLES", default="", cast=Csv())
