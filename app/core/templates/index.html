@@ -22,7 +22,7 @@
 
 <body>
 
-  <!-- MODALS -->
+  <!-- MODAL -->
   <div class="modal fade" id="modalDonation" tabindex="-1" aria-labelledby="modalDonationTitle" style="display: none;"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -34,28 +34,39 @@
 
           <!-- Image -->
           <div class="text-center">
-            <img src="{% static 'img/covers/collection-1.jpg' %}" alt="..." class="img-fluid mb-3 rounded-pill">
+            <img src="{% static 'img/covers/collection-1.jpeg' %}" alt="..." class="img-fluid my-3">
           </div>
-
-          <!-- Heading -->
-          <h3 class="fw-bold text-center mb-0" id="modalDonationTitle">
-            “Quem vive a caridade vive em Deus.”
-          </h3>
-
-          <!-- Text -->
-          <h4 class="fs-lg text-center text-body-secondary mb-6 mb-md-8">
-            - São Padre Pio de Pietrelcina
-          </h4>
 
           <!-- Form -->
           <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12">
+              <div class="input-group mb-3">
+                <input class="form-control text-center" type="text" value="33.593.575/0168-94" readonly="true">
+                <button class="btn btn-primary" type="button" onclick="Copy()">
+                  <span class="fe fe-link-2"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-12">
+              <h4 class="fw-bold text-uppercase mb-1" id="modalExampleTitle">
+                Seja dizimista
+              </h4>
+              <p class="fs-lg text-body-secondary">
+                Basta apenas preencher o formulário e iremos entrar em contato.
+              </p>
+            </div>
+
+            <div class=" col-12 col-md-6">
 
               <!-- First name -->
               <div class="form-floating">
                 <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal"
                   placeholder="First name">
-                <label for="registrationFirstNameModal">First name</label>
+                <label for="registrationFirstNameModal">Nome</label>
               </div>
 
             </div>
@@ -65,39 +76,49 @@
               <div class="form-floating">
                 <input type="text" class="form-control form-control-flush" id="registrationLastNameModal"
                   placeholder="Last name">
-                <label for="registrationLastNameModal">Last name</label>
+                <label for="registrationLastNameModal">Sobrenome</label>
               </div>
 
             </div>
           </div>
           <div class="row">
+            <div class="col-12 col-md-6">
+
+              <!-- Phone -->
+              <div class="form-floating">
+                <input type="text" class="form-control form-control-flush" id="registrationPasswordModal"
+                  placeholder="Telefone">
+                <label for="registrationPasswordModal">Telefone</label>
+              </div>
+
+            </div>
             <div class="col-12 col-md-6">
 
               <!-- Email -->
               <div class="form-floating">
                 <input type="email" class="form-control form-control-flush" id="registrationEmailModal"
                   placeholder="Email">
-                <label for="registrationEmailModal">Email</label>
+                <label for="registrationEmailModal">E-mail</label>
               </div>
 
             </div>
-            <div class="col-12 col-md-6">
 
-              <!-- Password -->
-              <div class="form-floating">
-                <input type="password" class="form-control form-control-flush" id="registrationPasswordModal"
-                  placeholder="Password">
-                <label for="registrationPasswordModal">Password</label>
+            <!-- Childrens -->
+            <div class="col-12">
+              <div class="input-group">
+                <div class="input-group-text">
+                  <input class="form-check-input mt-0" type="checkbox" value="">
+                </div>
+                <input type="text" class="form-control" placeholder="Possui filhos? Quantos?">
               </div>
-
             </div>
           </div>
           <div class="row">
             <div class="col-12">
 
               <!-- Submit -->
-              <button class="btn w-100 btn-primary mt-3 lift">
-                Request a demo
+              <button class="btn w-100 btn-primary mt-5 lift">
+                Desejo ser dizimista
               </button>
 
             </div>
@@ -113,7 +134,7 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="./index.html">
+      <a class="navbar-brand" href="/">
         sancta
       </a>
 
@@ -135,100 +156,14 @@
         <!-- Navigation -->
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true"
-              aria-expanded="false">
+            <a class="nav-link" id="navbarPages" href="#about">
               Sobre nós
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarPages">
-              <div class="row gx-0">
-                <div class="col-6">
-                  <div class="row gx-0">
-                    <div class="col-12 col-lg-6">
-
-                      <!-- Heading -->
-                      <h6 class="dropdown-header">
-                        Paróquia
-                      </h6>
-
-                      <!-- List -->
-                      <a class="dropdown-item mb-5" href="#">
-                        Nossa história
-                      </a>
-
-                      <!-- Heading -->
-                      <h6 class="dropdown-header">
-                        Quem somos
-                      </h6>
-
-                      <!-- List -->
-                      <a class="dropdown-item" href="#">
-                        Padres
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        Funcionários
-                      </a>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- / .row -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="navbarLandings" data-bs-toggle="dropdown" href="#" aria-haspopup="true"
-              aria-expanded="false">
-              Missas
+            <a class="nav-link" id="navbarLandings" href="#schedule">
+              Horários
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="navbarLandings" data-bs-toggle="dropdown" href="#" aria-haspopup="true"
-              aria-expanded="false">
-              Confissão
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarPages" data-bs-toggle="dropdown" href="#" aria-haspopup="true"
-              aria-expanded="false">
-              Atividades
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarPages">
-              <div class="row gx-0">
-                <div class="col-6">
-                  <div class="row gx-0">
-                    <div class="col-12 col-lg-6">
-
-                      <!-- Heading -->
-                      <h6 class="dropdown-header">
-                        Paróquia
-                      </h6>
-
-                      <!-- List -->
-                      <a class="dropdown-item" href="#">
-                        Patronato
-                      </a>
-
-                      <a class="dropdown-item mb-5" href="#">
-                        Caridade
-                      </a>
-
-                      <!-- Heading -->
-                      <h6 class="dropdown-header">
-                        Ministério
-                      </h6>
-
-                      <!-- List -->
-                      <a class="dropdown-item" href="#">
-                        Batismo
-                      </a>
-                      <a class="dropdown-item" href="#">
-                        Dízimo
-                      </a>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- / .row -->
           </li>
         </ul>
 
@@ -259,8 +194,7 @@
 
           <!-- Text -->
           <p class="fs-lg text-white text-opacity-80 mb-6">
-            Ave Maria, gratia plena, Dominus tecum. Benedicta tu in mulieribus, et benedictus fructus ventris tui,
-            Iesus.
+            Ave Maria, gratia plena, Dominus tecum.
           </p>
 
         </div>
@@ -269,14 +203,14 @@
   </section>
 
   <!-- MESSAGE -->
-  <section class="py-6 py-md-8 bg-warning">
+  <section class="py-6 py-md-8 bg-primary">
     <div class="container text-center">
-      <h1>sancta-dei-genetrix</h1>
+      <h1 class="text-white">Sancta Dei Genetrix</h1>
     </div> <!-- / .container -->
   </section>
 
   <!-- ABOUT -->
-  <section class="py-8 py-md-11 bg-gray-200">
+  <section class="py-8 py-md-11 bg-gray-200" id="about">
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-12 col-md-6">
@@ -295,9 +229,9 @@
           <p class="lead text-body-secondary mb-6 mb-md-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua.
-            <a class="btn btn-primary-subtle btn-rounded-circle btn-xs mb-1">
+            {% comment %} <a class="btn btn-primary-subtle btn-rounded-circle btn-xs mb-1">
               <i class="fe fe-arrow-up-right"></i>
-            </a>
+            </a> {% endcomment %}
           </p>
 
         </div>
@@ -336,7 +270,7 @@
   </section>
 
   <!-- SCHEDULE -->
-  <section class="pt-8 pt-md-11">
+  <section class="py-8 py-md-11" id="schedule">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -362,9 +296,9 @@
             <div class="row gx-0">
               <div class="col-12">
                 <!-- Badge -->
-                <a class="badge rounded-pill text-bg-light badge-float badge-float-inside" href="">
+                {% comment %} <a class="badge rounded-pill text-bg-light badge-float badge-float-inside" href="">
                   <span class="h6 text-uppercase">Marcar confissão <i class="fe fe-calendar"></i></span>
-                </a>
+                </a> {% endcomment %}
               </div>
 
               <div class="col-12 col-md-6">
@@ -379,7 +313,8 @@
 
                   <!-- Text -->
                   <p class="mb-0 text-white text-opacity-80">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat.
                   </p>
@@ -411,9 +346,9 @@
             <div class="row gx-0 justify-content-end">
               <div class="col-12">
                 <!-- Badge -->
-                <a class="badge rounded-pill text-bg-light badge-float badge-float-inside" href="">
+                {% comment %} <a class="badge rounded-pill text-bg-light badge-float badge-float-inside" href="">
                   <span class="h6 text-uppercase">Colocar intenções <i class="fe fe-mail"></i></span>
-                </a>
+                </a> {% endcomment %}
               </div>
 
               <div class="col-12 col-md-6">
@@ -428,7 +363,8 @@
 
                   <!-- Text -->
                   <p class="mb-0 text-white text-opacity-80">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat.
                   </p>
@@ -505,183 +441,72 @@
   <footer class="py-8 py-md-11 bg-gray-200">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4 col-lg-3">
+        <div class="col-12 col-md-4 col-lg-4">
 
           <!-- Brand -->
-          <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
+          N. SRA. DE NAZARÉ
 
           <!-- Text -->
           <p class="text-gray-700 mb-2">
-            A better way to build.
+            Sancta Dei Genetrix
           </p>
 
           <!-- Social -->
           <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
             <li class="list-inline-item list-social-item me-3">
-              <a href="#!" class="text-decoration-none">
-                <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
+              <a href="https://www.instagram.com/pascomnazare/" target="_blank" class="text-decoration-none">
+                <img src="{% static 'img/social/instagram.svg' %}" class="list-social-icon" alt="...">
               </a>
             </li>
             <li class="list-inline-item list-social-item me-3">
-              <a href="#!" class="text-decoration-none">
-                <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
-              </a>
-            </li>
-            <li class="list-inline-item list-social-item me-3">
-              <a href="#!" class="text-decoration-none">
-                <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
-              </a>
-            </li>
-            <li class="list-inline-item list-social-item">
-              <a href="#!" class="text-decoration-none">
-                <img src="./assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
+              <a href="https://www.facebook.com/pascom.nazare" target="_blank" class="text-decoration-none">
+                <img src="{% static 'img/social/facebook.svg' %}" class="list-social-icon" alt="...">
               </a>
             </li>
           </ul>
 
         </div>
-        <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-4">
 
           <!-- Heading -->
           <h6 class="fw-bold text-uppercase text-gray-700">
-            Products
+            Contatos
           </h6>
 
           <!-- List -->
           <ul class="list-unstyled text-body-secondary mb-6 mb-md-8 mb-lg-0">
             <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Page Builder
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                UI Kit
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Styleguide
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a href="#!" class="text-reset">
-                Changelog
-              </a>
+              <p class="text-reset">
+                <span class="fe fe-phone-call"></span> (21) 3012-7285
+              </p>
             </li>
           </ul>
 
         </div>
-        <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-4">
 
           <!-- Heading -->
           <h6 class="fw-bold text-uppercase text-gray-700">
-            Services
+            Endereço
           </h6>
-
-          <!-- List -->
           <ul class="list-unstyled text-body-secondary mb-6 mb-md-8 mb-lg-0">
             <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Documentation
-              </a>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1308.4651117901053!2d-43.399000186563846!3d-22.82253933282605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9963fad6b4cb8d%3A0xa2dd671566d73f6d!2sIgreja%20Nossa%20Senhora%20de%20Nazar%C3%A9!5e0!3m2!1sen!2sbr!4v1706048412326!5m2!1sen!2sbr"
+                width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </li>
             <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Changelog
-              </a>
+              <p class="text-reset">
+                Praça Nossa Senhora de Nazaré, 18 - Anchieta, Rio de Janeiro, RJ, Brazil
+              </p>
             </li>
             <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Pagebuilder
-              </a>
-            </li>
-            <li>
-              <a href="#!" class="text-reset">
-                UI Kit
-              </a>
+              <p class="text-reset">
+                Venha nos visitar
+              </p>
             </li>
           </ul>
-
-        </div>
-        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
-
-          <!-- Heading -->
-          <h6 class="fw-bold text-uppercase text-gray-700">
-            Connect
-          </h6>
-
-          <!-- List -->
-          <ul class="list-unstyled text-body-secondary mb-0">
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Page Builder
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                UI Kit
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Styleguide
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Documentation
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Changelog
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a href="#!" class="text-reset">
-                Changelog
-              </a>
-            </li>
-          </ul>
-
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-
-          <!-- Heading -->
-          <h6 class="fw-bold text-uppercase text-gray-700">
-            Legal
-          </h6>
-
-          <!-- List -->
-          <ul class="list-unstyled text-body-secondary mb-0">
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Documentation
-              </a>
-            </li>
-            <li class="mb-3">
-              <a href="#!" class="text-reset">
-                Changelog
-              </a>
-            </li>
-            <li>
-              <a href="#!" class="text-reset">
-                Pagebuilder
-              </a>
-            </li>
-          </ul>
-
         </div>
       </div> <!-- / .row -->
     </div> <!-- / .container -->
@@ -693,6 +518,16 @@
 
   <!-- Theme JS -->
   <script src="{% static 'js/theme.bundle.js' %}"></script>
+
+  <script>
+    var copy_text_val = document.querySelector('.copy_text');
+
+    function Copy() {
+      copy_text_val.select();
+      document.execCommand("copy");
+      console.log(copy_text_val.value);
+    }
+  </script>
 
 </body>
 
